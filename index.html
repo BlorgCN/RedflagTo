@@ -25,9 +25,7 @@
     <title>红旗所飘，皆为国人 - 中国人的博客链接力！</title>
     <link rel="shortcut icon" href="https://blorg.img.run/redflagto/favicon.ico">
     <script src="https://blorg.img.run/redflagto/redflagto.js"></script>
-
     <style type="text/css">
-
         * {
             color: #fffcf5;
             margin: 0;
@@ -45,7 +43,15 @@
 
         body {
             position: relative;
-            background: #c40000;
+            background: linear-gradient(to bottom,#bb0303 0%,#c40000 100%);
+        }
+
+        .cc {
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background-image:url('https://blorg.img.run/redflagto/bg.svg');
             background-repeat: no-repeat;
             background-position: left bottom;
@@ -69,11 +75,11 @@
             display: -webkit-flex;
             top: 58%;
             justify-content: center;
-            animation: blink 3s linear infinite;
-            -webkit-animation: blink 3s linear infinite;
-            -moz-animation: blink 3s linear infinite;
-            -ms-animation: blink 3s linear infinite;
-            -o-animation: blink 3s linear infinite;
+            animation: botCenter 3s linear;
+            -webkit-animation: botCenter 3s linear;
+            -moz-animation: botCenter 3s linear;
+            -ms-animation: botCenter 3s linear;
+            -o-animation: botCenter 3s linear;
         }
 
         .flag {
@@ -103,171 +109,50 @@
             color: #ffde00;
         }
 
-        @keyframes blink {
-            0% {
-                opacity: 0;
-                transform: scale(1);
-            }
-
-            20% {
-                opacity: 0;
-                transform: scale(1);
-            }
-
-            40% {
-                opacity: 0.3;
-                transform: scale(1);
-            }
-
-            80% {
-                opacity: 1;
-                transform: scale(0.98);
-            }
-
-            90% {
-                opacity: 1;
-                transform: scale(0.98);
-            }
-
-            100% {
-                opacity: 0.2;
-                transform: scale(1.2);
-            }
+        .go {
+            position: relative;
+            display: contents;
         }
 
-        @-webkit-keyframes blink {
-            0% {
-                opacity: 0;
-                transform: scale(1);
-            }
-
-            20% {
-                opacity: 0;
-                transform: scale(1);
-            }
-
-            40% {
-                opacity: 0.3;
-                transform: scale(1);
-            }
-
-            80% {
-                opacity: 1;
-                transform: scale(0.98);
-            }
-
-            90% {
-                opacity: 1;
-                transform: scale(0.98);
-            }
-
-            100% {
-                opacity: 0.2;
-                transform: scale(1.2);
-            }
+        .gotime {
+            position: absolute;
+            top: 0;
+            width: 76px;
+            color: #ea9100;
+            font-size: 98px
+        }
+        .gotime-circle {
+            position: absolute;
+            top: -50px;
         }
 
-        @-moz-keyframes blink {
-            0% {
-                opacity: 0;
-                transform: scale(1);
-            }
-
-            20% {
-                opacity: 0;
-                transform: scale(1);
-            }
-
-            40% {
-                opacity: 0.3;
-                transform: scale(1);
-            }
-
-            80% {
-                opacity: 1;
-                transform: scale(0.98);
-            }
-
-            90% {
-                opacity: 1;
-                transform: scale(0.98);
-            }
-
-            100% {
-                opacity: 0.2;
-                transform: scale(1.2);
-            }
+        .gotime-sec-circle {
+            stroke-dashoffset: 0;
+            stroke-dasharray: 735;
+            transition: stroke-dashoffset 1s linear
         }
-
-        @-ms-keyframes blink {
-            0% {
-                opacity: 0;
-                transform: scale(1);
-            }
-
-            20% {
-                opacity: 0;
-                transform: scale(1);
-            }
-
-            40% {
-                opacity: 0.3;
-                transform: scale(1);
-            }
-
-            80% {
-                opacity: 1;
-                transform: scale(0.98);
-            }
-
-            90% {
-                opacity: 1;
-                transform: scale(0.98);
-            }
-
-            100% {
-                opacity: 0.2;
-                transform: scale(1.2);
-            }
+        .welcome {
+            z-index: 888;
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            display: -webkit-flex;
+            top: 58%;
+            justify-content: center;
+            animation: welcome 3s linear infinite;
+            -webkit-animation: welcome 3s linear infinite;
+            -moz-animation: welcome 3s linear infinite;
+            -ms-animation: welcome 3s linear infinite;
+            -o-animation: welcome 3s linear infinite;
         }
-
-        @-o-keyframes blink {
-            0% {
-                opacity: 0;
-                transform: scale(1);
-            }
-
-            20% {
-                opacity: 0;
-                transform: scale(1);
-            }
-
-            40% {
-                opacity: 0.3;
-                transform: scale(1);
-            }
-
-            80% {
-                opacity: 1;
-                transform: scale(0.98);
-            }
-
-            90% {
-                opacity: 1;
-                transform: scale(0.98);
-            }
-
-            100% {
-                opacity: 0.2;
-                transform: scale(1.2);
-            }
-        }
-
         .botCenter {
+            z-index: 999;
+            padding: 88px 0 0;
             position: fixed;
             width: 100%;
-            height: 50px;
-            bottom: 2px;
+            bottom: 13px;
             line-height: 20px;
             font-size: 12px;
             text-align: center;
@@ -277,6 +162,168 @@
             -ms-animation: botCenter 3s linear;
             -o-animation: botCenter 3s linear;
         }
+
+
+        @keyframes welcome {
+            0% {
+                opacity: 0;
+                transform: scale(1);
+            }
+
+            20% {
+                opacity: 0;
+                transform: scale(1);
+            }
+
+            40% {
+                opacity: 0.3;
+                transform: scale(1);
+            }
+
+            80% {
+                opacity: 1;
+                transform: scale(0.98);
+            }
+
+            90% {
+                opacity: 1;
+                transform: scale(0.98);
+            }
+
+            100% {
+                opacity: 0.2;
+                transform: scale(1.2);
+            }
+        }
+
+        @-webkit-keyframes welcome {
+            0% {
+                opacity: 0;
+                transform: scale(1);
+            }
+
+            20% {
+                opacity: 0;
+                transform: scale(1);
+            }
+
+            40% {
+                opacity: 0.3;
+                transform: scale(1);
+            }
+
+            80% {
+                opacity: 1;
+                transform: scale(0.98);
+            }
+
+            90% {
+                opacity: 1;
+                transform: scale(0.98);
+            }
+
+            100% {
+                opacity: 0.2;
+                transform: scale(1.2);
+            }
+        }
+
+        @-moz-keyframes welcome {
+            0% {
+                opacity: 0;
+                transform: scale(1);
+            }
+
+            20% {
+                opacity: 0;
+                transform: scale(1);
+            }
+
+            40% {
+                opacity: 0.3;
+                transform: scale(1);
+            }
+
+            80% {
+                opacity: 1;
+                transform: scale(0.98);
+            }
+
+            90% {
+                opacity: 1;
+                transform: scale(0.98);
+            }
+
+            100% {
+                opacity: 0.2;
+                transform: scale(1.2);
+            }
+        }
+
+        @-ms-keyframes welcome {
+            0% {
+                opacity: 0;
+                transform: scale(1);
+            }
+
+            20% {
+                opacity: 0;
+                transform: scale(1);
+            }
+
+            40% {
+                opacity: 0.3;
+                transform: scale(1);
+            }
+
+            80% {
+                opacity: 1;
+                transform: scale(0.98);
+            }
+
+            90% {
+                opacity: 1;
+                transform: scale(0.98);
+            }
+
+            100% {
+                opacity: 0.2;
+                transform: scale(1.2);
+            }
+        }
+
+        @-o-keyframes welcome {
+            0% {
+                opacity: 0;
+                transform: scale(1);
+            }
+
+            20% {
+                opacity: 0;
+                transform: scale(1);
+            }
+
+            40% {
+                opacity: 0.3;
+                transform: scale(1);
+            }
+
+            80% {
+                opacity: 1;
+                transform: scale(0.98);
+            }
+
+            90% {
+                opacity: 1;
+                transform: scale(0.98);
+            }
+
+            100% {
+                opacity: 0.2;
+                transform: scale(1.2);
+            }
+        }
+
 
         @keyframes botCenter {
             0% {
@@ -412,8 +459,9 @@
 </head>
 
 <body>
-
+    <div class="cc"></div>
     <canvas id="RedflagTo"></canvas>
+    <canvas id="bg"></canvas>
 
     <div class="flag">
         <h2>红旗所飘，皆为国人</h2>
@@ -421,24 +469,48 @@
     </div>
 
     <div class="blink">
-        <a href="https://discuss.blorg.cn/" target="_blank"
-            title="点击加入“博客联盟”，分享网站流量 :-)">欢迎回来，红旗即将<b>&nbsp飘向&nbsp</b>下一个中国博客……<br />Welcome back, Redflag To the next China Blog…</a>
+        <div class="go">
+            <svg class="gotime-circle" width="234" height="234">
+              <circle cx="117" cy="117" r="108" fill="#c40000" stroke="#d23300" stroke-width="17"></circle>
+              <circle id="js-sec-circle" class="gotime-sec-circle" cx="117" cy="117" r="108" fill="transparent" stroke="#ea9100" stroke-width="18" transform="rotate(-90 117 117)"></circle>
+            </svg>
+            <div id="gotime" class="gotime"></div>
+        </div>
     </div>
 
+    <div id="welcome" class="welcome"></div>
 
     <div class="botCenter">
-        © 博客联盟 2014 - <script>document.write((new Date()).getFullYear())</script>
+        © 博客联盟 2014 - <script>document.write((new Date()).getFullYear())</script><br>
         温馨提醒: <b>后退</b>网页红旗再次随机飘向…<br />
         <a href="https://blorg.cn" target="_blank">博客联盟</a> 🇨🇳 
         <a href="https://discuss.blorg.cn" target="_blank">用户社区</a> 🇨🇳 
         <a href="https://discuss.blorg.cn/forum-2.htm" target="_blank">博客公证</a> 🇨🇳 
-        <a href="https://discuss.blorg.cn" target="_blank">关于本站</a>
+        <a href="https://discuss.blorg.cn/thread-53.htm" target="_blank">关于本站</a>
     </div>
 
-    <script language="javascript">
-        window.setTimeout("window.location.href='javascript:redflagto()'", 5000);
+    <script>
+    function alertSet(e) {
+        document.getElementById("welcome").innerHTML = e;
+        var t = 8,
+        n = document.getElementById("js-sec-circle");
+        document.getElementById("gotime").innerHTML = t,
+        setInterval(function() {
+            if (0 == t){
+                window.location.href="javascript:redflagto()";//#时间到后跳转地址
+            }else {
+                t -= 1,
+                document.getElementById("gotime").innerHTML = t;
+                var e = Math.round(t / 10 * 735);
+                n.style.strokeDashoffset = e - 735
+            }
+        },
+        970);
+    }
     </script>
-
+    <script>
+        alertSet('<a href="https://discuss.blorg.cn/" target="_blank" title="点击加入“博客联盟”，分享网站流量 :-)">欢迎回来，红旗即将<b>&nbsp飘向&nbsp</b>下一个中国博客……<br />Welcome back, Redflag To the next China Blog…</a>');
+    </script>
     <script>
     var canvas = document.getElementById('RedflagTo')
     var ctx = canvas.getContext('2d')
@@ -516,6 +588,9 @@
         }
         requestAnimationFrame(tick)
     }
+
+
+
     </script>
 
 </body>
