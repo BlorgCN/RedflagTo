@@ -1,0 +1,523 @@
+<!--
+
+  _____          _  __ _          _______    
+ |  __ \        | |/ _| |        |__   __|   
+ | |__) |___  __| | |_| | __ _  __ _| | ___  
+ |  _  // _ \/ _` |  _| |/ _` |/ _` | |/ _ \ 
+ | | \ \  __/ (_| | | | | (_| | (_| | | (_) |
+ |_|  \_\___|\__,_|_| |_|\__,_|\__, |_|\___/ 
+                                __/ |        
+                               |___/         
+
+红旗飘飘项目主页 RedflagTo.com
+
+红旗所飘，皆为国人 - 中国人的博客链接力！
+
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>红旗所飘，皆为国人 - 中国人的博客链接力！</title>
+    <link rel="shortcut icon" href="https://blorg.img.run/redflagto/favicon.ico">
+    <script src="https://blorg.img.run/redflagto/redflagto.js"></script>
+
+    <style type="text/css">
+
+        * {
+            color: #fffcf5;
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            position: relative;
+            background: #c40000;
+            background-image:url('https://blorg.img.run/redflagto/bg.svg');
+            background-repeat: no-repeat;
+            background-position: left bottom;
+            background-size: 100%;
+        }
+
+        #RedflagTo {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform-origin: center;
+            transform: translate3d(-50%, -50%, 0);
+        }
+
+        .blink {
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            display: -webkit-flex;
+            top: 58%;
+            justify-content: center;
+            animation: blink 3s linear infinite;
+            -webkit-animation: blink 3s linear infinite;
+            -moz-animation: blink 3s linear infinite;
+            -ms-animation: blink 3s linear infinite;
+            -o-animation: blink 3s linear infinite;
+        }
+
+        .flag {
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+            top: 33%;
+            animation: botCenter 3s linear;
+            -webkit-animation: botCenter 3s linear;
+            -moz-animation: botCenter 3s linear;
+            -ms-animation: botCenter 3s linear;
+            -o-animation: botCenter 3s linear;
+        }
+
+        .flag h2 {
+            color: #ffde00;
+            font-size: 2rem;
+        }
+
+        .flag p {
+            line-height: 3;
+        }
+
+        .flag b {
+            color: #ffde00;
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 0;
+                transform: scale(1);
+            }
+
+            20% {
+                opacity: 0;
+                transform: scale(1);
+            }
+
+            40% {
+                opacity: 0.3;
+                transform: scale(1);
+            }
+
+            80% {
+                opacity: 1;
+                transform: scale(0.98);
+            }
+
+            90% {
+                opacity: 1;
+                transform: scale(0.98);
+            }
+
+            100% {
+                opacity: 0.2;
+                transform: scale(1.2);
+            }
+        }
+
+        @-webkit-keyframes blink {
+            0% {
+                opacity: 0;
+                transform: scale(1);
+            }
+
+            20% {
+                opacity: 0;
+                transform: scale(1);
+            }
+
+            40% {
+                opacity: 0.3;
+                transform: scale(1);
+            }
+
+            80% {
+                opacity: 1;
+                transform: scale(0.98);
+            }
+
+            90% {
+                opacity: 1;
+                transform: scale(0.98);
+            }
+
+            100% {
+                opacity: 0.2;
+                transform: scale(1.2);
+            }
+        }
+
+        @-moz-keyframes blink {
+            0% {
+                opacity: 0;
+                transform: scale(1);
+            }
+
+            20% {
+                opacity: 0;
+                transform: scale(1);
+            }
+
+            40% {
+                opacity: 0.3;
+                transform: scale(1);
+            }
+
+            80% {
+                opacity: 1;
+                transform: scale(0.98);
+            }
+
+            90% {
+                opacity: 1;
+                transform: scale(0.98);
+            }
+
+            100% {
+                opacity: 0.2;
+                transform: scale(1.2);
+            }
+        }
+
+        @-ms-keyframes blink {
+            0% {
+                opacity: 0;
+                transform: scale(1);
+            }
+
+            20% {
+                opacity: 0;
+                transform: scale(1);
+            }
+
+            40% {
+                opacity: 0.3;
+                transform: scale(1);
+            }
+
+            80% {
+                opacity: 1;
+                transform: scale(0.98);
+            }
+
+            90% {
+                opacity: 1;
+                transform: scale(0.98);
+            }
+
+            100% {
+                opacity: 0.2;
+                transform: scale(1.2);
+            }
+        }
+
+        @-o-keyframes blink {
+            0% {
+                opacity: 0;
+                transform: scale(1);
+            }
+
+            20% {
+                opacity: 0;
+                transform: scale(1);
+            }
+
+            40% {
+                opacity: 0.3;
+                transform: scale(1);
+            }
+
+            80% {
+                opacity: 1;
+                transform: scale(0.98);
+            }
+
+            90% {
+                opacity: 1;
+                transform: scale(0.98);
+            }
+
+            100% {
+                opacity: 0.2;
+                transform: scale(1.2);
+            }
+        }
+
+        .botCenter {
+            position: fixed;
+            width: 100%;
+            height: 50px;
+            bottom: 2px;
+            line-height: 20px;
+            font-size: 12px;
+            text-align: center;
+            animation: botCenter 3s linear;
+            -webkit-animation: botCenter 3s linear;
+            -moz-animation: botCenter 3s linear;
+            -ms-animation: botCenter 3s linear;
+            -o-animation: botCenter 3s linear;
+        }
+
+        @keyframes botCenter {
+            0% {
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 0;
+            }
+
+            40% {
+                opacity: 0.3;
+            }
+
+            80% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @-webkit-keyframes botCenter {
+            0% {
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 0;
+            }
+
+            40% {
+                opacity: 0.3;
+            }
+
+            80% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @-moz-keyframes botCenter {
+            0% {
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 0;
+            }
+
+            40% {
+                opacity: 0.3;
+            }
+
+            80% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @-ms-keyframes botCenter {
+            0% {
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 0;
+            }
+
+            40% {
+                opacity: 0.3;
+            }
+
+            80% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @-o-keyframes botCenter {
+            0% {
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 0;
+            }
+
+            40% {
+                opacity: 0.3;
+            }
+
+            80% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <canvas id="RedflagTo"></canvas>
+
+    <div class="flag">
+        <h2>红旗所飘，皆为国人</h2>
+        <p>有一种骄傲，叫做<b>我是中国人！</b>这里是中国人的博客链接力…</p>
+    </div>
+
+    <div class="blink">
+        <a href="https://discuss.blorg.cn/" target="_blank"
+            title="点击加入“博客联盟”，分享网站流量 :-)">欢迎回来，红旗即将<b>&nbsp飘向&nbsp</b>下一个中国博客……<br />Welcome back, Redflag To the next China Blog…</a>
+    </div>
+
+
+    <div class="botCenter">
+        © 博客联盟 2014 - <script>document.write((new Date()).getFullYear())</script>
+        温馨提醒: <b>后退</b>网页红旗再次随机飘向…<br />
+        <a href="https://blorg.cn" target="_blank">博客联盟</a> 🇨🇳 
+        <a href="https://discuss.blorg.cn" target="_blank">用户社区</a> 🇨🇳 
+        <a href="https://discuss.blorg.cn/forum-2.htm" target="_blank">博客公证</a> 🇨🇳 
+        <a href="https://discuss.blorg.cn" target="_blank">关于本站</a>
+    </div>
+
+    <script language="javascript">
+        window.setTimeout("window.location.href='javascript:redflagto()'", 5000);
+    </script>
+
+    <script>
+    var canvas = document.getElementById('RedflagTo')
+    var ctx = canvas.getContext('2d')
+
+    var IMG_MAX_WIDTH = 450
+    var IMG_MAX_HEIGHT = 300
+    var imgWidth, imgHeight
+
+    var image = new Image()
+    image.src = 'https://blorg.img.run/redflagto/redflag.svg'
+
+    var amplitude = 20 // 振幅
+    var period = 1 // 周期数
+    var frequency = 1 // 频率
+    var wavelength // 波长
+    var v // 波速
+    var cftX // x系数
+    var cftA // 振幅系数
+
+    image.onload = function (ev) {
+
+        imgWidth = Math.floor(image.width)
+        imgHeight = Math.floor(image.height)
+
+        var canvas = document.getElementById('RedflagTo')
+        var scale = 1
+        if (imgWidth > IMG_MAX_WIDTH) {
+            scale = IMG_MAX_WIDTH / imgWidth
+        }
+        if (imgHeight > IMG_MAX_HEIGHT) {
+            scale = scale * IMG_MAX_HEIGHT / imgHeight
+        }
+
+        canvasWidth = imgWidth
+        canvasHeight = imgHeight + amplitude * 2
+        canvas.width = canvasWidth
+        canvas.height = canvasHeight
+        canvas.style.transform = 'translate3d(-50%,-50%,0) scale(' + scale + ')'
+
+        wavelength = imgWidth / period
+        cftX = 2 * Math.PI / wavelength
+        cftA = amplitude / imgWidth
+        v = wavelength * frequency
+
+        tick()
+    }
+
+    var fps = 70 // 每秒帧数
+    var interval = 1000 / fps // 连续帧之间间隔（理论）
+    var stop = false // 停止动画
+    var timeNow = Date.now() // 当前时间
+    var timeLast = timeNow // 上一帧时间
+    var delta = 0 // 连续帧之间间隔（实际）
+
+    var y = 0
+    var lastY = 0
+    var distance = 0
+    var tick = function () {
+        if (stop) return false
+        timeNow = Date.now()
+        delta = timeNow - timeLast
+        if (delta > interval) {
+            timeLast = timeNow
+            distance += (delta / 1000 * v)
+            ctx.clearRect(0, 0, canvasWidth, canvasHeight)
+            for (var x = 0; x < imgWidth; x++) {
+                // var y = cftA * x * Math.sin(cftX * (x - distance)) + amplitude
+                // ctx.drawImage(image, x, 0, 1, imgHeight, x, y, 1, imgHeight)
+                y = cftA * x * Math.sin(cftX * (x - distance)) + amplitude
+                ctx.drawImage(image, x, 0, 1, imgHeight, x, y, 1, imgHeight)
+                ctx.fillStyle = 'rgba(255,255,255,' + (x === 0 ? 0 : (y - lastY) * 0.5) + ')'
+                ctx.fillRect(x, y, 1, imgHeight)
+                lastY = y
+            }
+        }
+        requestAnimationFrame(tick)
+    }
+    </script>
+
+</body>
+
+</html>
